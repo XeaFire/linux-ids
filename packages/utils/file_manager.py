@@ -12,7 +12,7 @@ class FileManager:
             r = sha256(f.read().encode('utf-8')).hexdigest()
         return r
     
-    def GetInfo(filepath : str, info = str) -> str:
+    def GetInfo(filepath : str, info = str) -> float:
         r = ""
         if (info == "size"):
             r = os.path.getsize(filepath)
