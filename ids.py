@@ -1,8 +1,8 @@
-import utils
+from packages import utils
 
 def main():
     ben = input("plop")
-    utils.HashManager.GetHashFromFile(ben)
+    utils.HashManager.GetHash(ben, "sha256")
     
 
 if __name__ == "__main__":
