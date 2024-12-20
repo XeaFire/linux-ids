@@ -31,4 +31,4 @@ class FileManager:
             "cdate" : c,
             "mdate" : m
         }
-        return info
+        return infos
