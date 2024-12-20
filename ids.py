@@ -4,7 +4,7 @@ def main():
     ben = input("plop")
     print(utils.FileManager.GetHash(ben, "sha256"))
     data = utils.FileManager.GetAllInfos()
-    utils.JsonManager.Write(ben, data)
+    utils.JsonManager.Write("./ben/test.json", data)
     
 
 if __name__ == "__main__":
