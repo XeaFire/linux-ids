@@ -21,3 +21,14 @@ class FileManager:
         elif (info == "mdate"):
             r = os.path.getmtime(filepath)
         return r
+
+    def GetAllInfos(filepath : str):
+        s = FileManager.GetInfo(filepath, "size")
+        c = FileManager.GetInfo(filepath, "cdate")
+        m = FileManager.GetInfo(filepath, "mdate")
+        infos = {
+            "size" : s,
+            "cdate" : c,
+            "mdate" : m
+        }
+        return info
