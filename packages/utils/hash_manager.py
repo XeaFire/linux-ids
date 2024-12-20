@@ -3,6 +3,7 @@ from hashlib import sha512, sha256, md5
 class HashManager:
     def GetHash(filepath : str, hash = "sha256") -> str:
         f = open(filepath, "r")
+        print(f)
         r = ""
         if (hash == "sha512"):
             r = sha512(filepath.encode('utf-8')).hexdigest()
