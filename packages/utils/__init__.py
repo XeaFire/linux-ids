@@ -1,1 +1,1 @@
-from .hash_manager import HashManager
+from .file_manager import FileManager
