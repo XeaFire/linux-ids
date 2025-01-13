@@ -2,7 +2,7 @@ import json
 
 class JsonManager:
     def Parse(pathfile : str):
-        with open('strings.json') as f:
+        with open(pathfile) as f:
             d = json.load(f)
             return d
 
