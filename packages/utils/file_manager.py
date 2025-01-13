@@ -1,5 +1,7 @@
 from hashlib import sha512, sha256, md5
 import os
+from pwd import getpwuid
+
 class FileManager:
     def GetHash(filepath : str, hash = "sha256") -> str:
         f = open(filepath, "r")
@@ -21,6 +23,9 @@ class FileManager:
         elif (info == "mdate"):
             r = os.path.getmtime(filepath)
         return r
+    
+    def GetOwner(filename):
+        return getpwuid(os.stat(filename).st_uid).pw_name
 
     def GetAllInfos(filepath : str):
         s = FileManager.GetInfo(filepath, "size")
@@ -29,6 +34,10 @@ class FileManager:
         infos = {
             "size" : s,
             "cdate" : c,
-            "mdate" : m
+            "mdate" : m,
+            "SHA512" : FileManager.GetHash(filepath, "sha512"),
+            "SHA256" : FileManager.GetHash(filepath, "sha256"),
+            "MD5" : FileManager.GetHash(filepath, "md5"),
+            "Owner" : FileManager.GetOwner(filepath) 
         }
         return infos
