@@ -5,6 +5,7 @@ def main():
     print(utils.FileManager.GetHash(ben, "sha256"))
     data = utils.FileManager.GetAllInfos(ben)
     utils.JsonManager.Write("./test.json", data)
+    print(utils.JsonManager.Parse("./test.json"))
     
 
 if __name__ == "__main__":
