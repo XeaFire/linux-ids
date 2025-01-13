@@ -21,6 +21,8 @@ class JsonManager:
 
     def VerifyJson(pathfolder : str, data):
         old_data = JsonManager.Parse(pathfolder)
+        if (old_data is None):
+            return False
         if (old_data == data):
             return True
         else:
