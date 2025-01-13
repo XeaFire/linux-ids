@@ -1,4 +1,5 @@
 from hashlib import sha512, sha256, md5
+import json
 import os
 class FileManager:
     def GetHash(filepath : str, hash = "sha256") -> str:

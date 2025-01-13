@@ -1,0 +1,6 @@
+{
+    "filepath": "/etc/**/*",
+    "folderpath": ["dnf","firewalld","ssh"]
+    #"monitor-ports": true
+  }
+  
