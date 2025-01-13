@@ -6,7 +6,7 @@ def main():
     data = utils.FileManager.GetAllInfos(ben)
     utils.JsonManager.Write("/var/ids/db.json", data)
     print(utils.JsonManager.Parse("/var/ids/db.json"))
-    print(utils.JsonManager.VerifyJson("/var/ids/db.json"))
+    print(utils.JsonManager.VerifyJson("/var/ids/db.json", data))
     
 
 if __name__ == "__main__":
