@@ -1,7 +1,10 @@
 import json
+import file_manager
 
 class JsonManager:
     def Parse(pathfile : str):
+        if file_manager.FileManager.GetInfo(pathfile,"size") == 0:
+            return
         with open(pathfile) as f:
             d = json.load(f)
             return d
