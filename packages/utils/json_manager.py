@@ -1,12 +1,18 @@
 import json
+import sys
 from .file_manager import FileManager
 class JsonManager:
     def Parse(pathfile : str):
         if FileManager.GetInfo(pathfile,"size") == 0:
             return
-        with open(pathfile) as f:
-            d = json.load(f)
-            return d
+        try:
+            with open(pathfile) as f:
+                d = json.load(f)
+                return d
+        except json.decoder.JSONDecodeError:
+            print("il manque un json là ohhhh")
+            sys.exit(1)
+
 
     def Write(pathfile : str, data):
         with open(pathfile, 'w') as f:
@@ -23,8 +29,6 @@ class JsonManager:
 
     def VerifyJson(pathfolder : str, data):
         old_data = JsonManager.Parse(pathfolder)
-        if (old_data is None):
-            return False
         if (old_data == data):
             return True
         else:
