@@ -4,7 +4,8 @@
         "/etc/shadow"
     ],
     "folderpath": [
-        "/etc/security/"
+        "/etc/security/",
+        "test.json"
     ],
     "monitor-ports": false
 }
