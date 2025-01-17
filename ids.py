@@ -1,15 +1,12 @@
 from packages import utils
+import sys
 
 def main():
-    # ben = input("")
-    # print(utils.FileManager.GetHash(ben, "sha256"))
-    # data = utils.FileManager.GetAllInfos(ben)
-    # print(utils.JsonManager.VerifyJson("/var/ids/db.json", data))
-    # utils.JsonManager.Write("/var/ids/db.json", data)
-    # print(utils.JsonManager.Parse("/var/ids/db.json"))
-    
-    data = utils.JsonManager.PrepareData()
-    utils.JsonManager.Write("/var/ids/db.json", data)
+    if len(sys.argv) > 1 and sys.argv[1] == "check":
+        print("ben")
+    elif len(sys.argv) > 1 and sys.argv[1] == "prepare":
+        data = utils.JsonManager.PrepareData()
+        utils.JsonManager.Write("/var/ids/db.json", data)
 
 if __name__ == "__main__":
     main()
