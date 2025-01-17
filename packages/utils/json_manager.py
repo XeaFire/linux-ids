@@ -1,6 +1,8 @@
 import json
 import sys
 from .file_manager import FileManager
+from .folder_manager import FolderManager
+
 class JsonManager:
     def Parse(pathfile : str):
         if FileManager.GetInfo(pathfile,"size") == 0:
@@ -33,7 +35,7 @@ class JsonManager:
             entry = FileManager.GetAllInfos(file)
             result.append(entry)
         for folder in folderpaths:
-            entry = FileManager.GetAllInfos(folder)
+            entry = FolderManager.GetAllInfos(folder)
             result.append(entry)
 
         return result

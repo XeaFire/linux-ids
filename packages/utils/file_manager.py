@@ -28,17 +28,18 @@ class FileManager:
     def GetOwner(filename):
         return getpwuid(os.stat(filename).st_uid).pw_name
 
-    def GetAllInfos(filepath : str):
-        s = FileManager.GetInfo(filepath, "size")
-        c = FileManager.GetInfo(filepath, "cdate")
-        m = FileManager.GetInfo(filepath, "mdate")
-        infos = {
-            "size" : s,
-            "cdate" : c,
-            "mdate" : m,
-            "SHA512" : FileManager.GetHash(filepath, "sha512"),
-            "SHA256" : FileManager.GetHash(filepath, "sha256"),
-            "MD5" : FileManager.GetHash(filepath, "md5"),
-            "Owner" : FileManager.GetOwner(filepath) 
-        }
+    def GetAllInfos(filepath : str, entrytype):
+        if entrytype == "file":
+            s = FileManager.GetInfo(filepath, "size")
+            c = FileManager.GetInfo(filepath, "cdate")
+            m = FileManager.GetInfo(filepath, "mdate")
+            infos = {
+                "size" : s,
+                "cdate" : c,
+                "mdate" : m,
+                "SHA512" : FileManager.GetHash(filepath, "sha512"),
+                "SHA256" : FileManager.GetHash(filepath, "sha256"),
+                "MD5" : FileManager.GetHash(filepath, "md5"),
+                "Owner" : FileManager.GetOwner(filepath) 
+            }
         return infos
