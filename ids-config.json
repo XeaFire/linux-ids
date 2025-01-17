@@ -7,5 +7,6 @@
     "folderpath": [
         "/etc/security/"
     ],
-    "monitor-ports": false
+    "monitor-ports": false,
+    "discord-webhook": "https://discord.com/api/webhooks/1329758106888175617/tWsRX-46beml2kq1x5OOw7X2lxHKA8Zvv4zP_A5GzfnErV-TwRMd0mGVW0_XXOI0miKP"
 }
