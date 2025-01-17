@@ -9,5 +9,7 @@ def main():
     print(utils.JsonManager.Parse("/var/ids/db.json"))
     
 
+    print(utils.JsonManager.Parse("ids-config.json"))
+
 if __name__ == "__main__":
     main()
