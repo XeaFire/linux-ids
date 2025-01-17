@@ -9,11 +9,9 @@ app.secret_key = b'SECRET_KEY'
 # utilisation d'un décorateur Python avec @ pour donc décorer une fonction
 # c'est l'ajout de ce décorateur qui permet d'ajouter une route
 # c'est dans la doc de Flask, nous on obéit :D
-@app.route('/reporst', methods=['GET'])
+@app.route('/reports', methods=['GET'])
 def get_users():
-    file = open("data/users.json")
-    users = json.load(file)
-    file.close()
+    utils.JsonManager.Parse("/var/ids/db.json")
 
     # Flask fournit une méthode jsonify() qui permet de retourner des objets Python sous format JSON de façon adaptée
     return jsonify(users)
