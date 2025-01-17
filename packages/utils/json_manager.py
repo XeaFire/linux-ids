@@ -28,7 +28,7 @@ class JsonManager:
 
     def PrepareData():
         data = JsonManager.Parse("ids-config.json")
-        filepath = data.get("filepath", "")
+        filepath = data.get("filepath", [])
         folderpaths = data.get("folderpath", [])
         result = []
         for file in filepath:
