@@ -50,3 +50,15 @@ class JsonManager:
             return True
         else:
             return False
+        
+    def CompareData(data1, data2):
+        changed_records = []
+
+        for key in data1:
+            if key in data2:
+                if data1[key] != data2[key]:
+                    changed_records.append(key)
+            else:
+                changed_records.append(key)
+    
+        return changed_records

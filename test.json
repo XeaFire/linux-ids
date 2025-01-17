@@ -1,1 +1,38 @@
-{"size": 264, "cdate": 1734686373.7924542, "mdate": 1736756945.0772564}
+{
+    "/etc/sudoers": {
+        "size": 4328,
+        "cdate": 1727949887.8540137,
+        "mdate": 1707938359.0,
+        "SHA512": "7253800ce81885d3e7cd4d037bccfe7ec15cc8c3a5b9eb9dcfb5904cc6bb95a35685352999c617ba4a344772f30edc3ab16ea6eacd69cf08ddb82c8aa20af8ce",
+        "SHA256": "4fb99705d53cda191da5a54c227084c375fbc7f18910a130e8dfb77522d3ad05",
+        "MD5": "1b134d95a4618029ff962a63b021e1ca",
+        "Owner": "root"
+    },
+    "test.json": {
+        "size": 72,
+        "cdate": 1734730629.1681187,
+        "mdate": 1734730629.1681187,
+        "SHA512": "e000110a844ac7b7a5cdb9a0821387e31d6976f8b1a4a6737ecc5ef6b02fa35c717657acea2cba4e3ab0600e47ea69d770381250770ed286f4bffc1d58b41756",
+        "SHA256": "9bf0d80b41d0de5d343c68a264d4c76454f35466943763f306838c511ee5620a",
+        "MD5": "2c8a0ffd566879c7d769b6ae0151f026",
+        "Owner": "tristan"
+    },
+    "/etc/shadow": {
+        "size": 750,
+        "cdate": 1734701037.7321186,
+        "mdate": 1734701037.6891186,
+        "SHA512": "f3534ef4b39e9a2621f2c92911506035da2db86a0377edfc484c310ecad3dda9ee1009edac5ebbb00a669ac8f4787d7a5322efc54f0309afd06a09a182c00072",
+        "SHA256": "6e18d14bf7057da64b72362b78d363c4da7eb5c460836f89b8d6d77154a95c81",
+        "MD5": "4aa9f76c9fac0d548ea82e03c9578338",
+        "Owner": "root"
+    },
+    "/etc/security/": {
+        "size": 25920,
+        "cdate": 1695292923.0179925,
+        "mdate": 1713237763.0,
+        "SHA512": "0163378ef974e17d51e2d50f89c6d4687109a20c6be59dd9f645c37c3be094b7a74a86b77d1dbe60d27fcf8594b1679b4d2c2139edac086e1aae90099051d5f9",
+        "SHA256": "da38506b396e0e3f7eae1d186090c0cec3871f8a50b949976ea3fe417f755625",
+        "MD5": "9fc82ab0e8f96627a614591c076b1162",
+        "Owner": "root"
+    }
+}
