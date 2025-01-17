@@ -26,6 +26,7 @@ def Check():
         print("State : Divergent")
         print("Les fichiers / dossiers modifiés sont : " + ", ".join(utils.JsonManager.CompareData(old_data,data)))
     utils.JsonManager.Write("/var/ids/db.json", data)
+    utils.BonusManager.SendDiscordAlert("Les fichiers / dossiers modifiés sont : " + ", ".join(utils.JsonManager.CompareData(old_data,data)))
 
 
 if __name__ == "__main__":
