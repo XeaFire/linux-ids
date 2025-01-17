@@ -2,8 +2,8 @@
 Description= Mon petit service
 
 [Service]
-Restart=always
-ExecStart=/usr/bin/python3 /home/brendan/linux-ids/ids.py
+WorkingDirectory=/home/brendan/linux-ids
+ExecStart=/usr/bin/python3 /home/brendan/linux-ids/ids.py check
 
 [Install]
 WantedBy=multi-user.target
