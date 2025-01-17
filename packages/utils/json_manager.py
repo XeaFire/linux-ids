@@ -33,7 +33,7 @@ class JsonManager:
         result = []
         for file in filepath:
             entry = FileManager.GetAllInfos(file)
-            result[folder] = entry
+            result[file] = entry
         for folder in folderpaths:
             entry = FolderManager.GetAllInfos(folder)
             result[folder] = entry
