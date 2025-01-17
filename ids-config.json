@@ -1,11 +1,11 @@
 {
     "filepath": [
         "/etc/sudoers",
+        "test.json",
         "/etc/shadow"
     ],
     "folderpath": [
-        "/etc/security/",
-        "test.json"
+        "/etc/security/"
     ],
     "monitor-ports": false
 }
