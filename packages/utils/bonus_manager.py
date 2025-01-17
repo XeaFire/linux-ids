@@ -7,7 +7,9 @@ class BonusManager:
         config = JsonManager.Parse("ids-config.json")
         pattern = re.compile("/discordapp.com\/api\/webhooks\/([^\/]+)\/([^\/]+)/")
         if not pattern.match(config["discord-webhook"]):
+            print("ben")
             return
+        print("LowTaperfade")
         webhook = config["discord-webhook"]
         data = {"content": msg}
         requests.post(webhook, json=data)
