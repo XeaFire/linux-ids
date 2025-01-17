@@ -1,13 +1,20 @@
 from packages import utils
 import sys
+import os
 
 def main():
     if len(sys.argv) > 1 and sys.argv[1] == "check":
         Check()
     elif len(sys.argv) > 1 and sys.argv[1] == "build":
-        pass
+        Build()
     
 
+def Build():
+    if os.geteuid() != 0:
+        raise PermissionError("Execute le build avec sudo sinon tu n'auras pas de Low Taper Fade héhéhéhé")
+    if not os.path.isfile('/var/ids/db.json'):
+        utils.JsonManager.Write("/var/ids/db.json", "{}")
+        
 
 def Check():
     data = utils.JsonManager.PrepareData()
