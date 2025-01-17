@@ -17,7 +17,7 @@ def Check():
         print("State : Ok")
     else:
         print("State : Divergent")
-        print("Les fichiers / dossiers modifiés sont : " + utils.JsonManager.CompareData(data,old_data))
+        print("Les fichiers / dossiers modifiés sont : " + ", ".join(utils.JsonManager.CompareData(old_data,data)))
     utils.JsonManager.Write("/var/ids/db.json", data)
 
 
