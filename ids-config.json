@@ -1,9 +1,10 @@
 {
-    "filepath": "/etc/**/*",
+    "filepath": [
+        "/etc/sudoers",
+        "/etc/shadow"
+    ],
     "folderpath": [
-        "dnf",
-        "firewalld",
-        "ssh"
+        "/etc/security/"
     ],
     "monitor-ports": false
 }

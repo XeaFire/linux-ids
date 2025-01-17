@@ -24,8 +24,23 @@ class JsonManager:
     def DeleteKey(pathfile : str, key : str, data):
         pass
 
+    def PrepareData():
+        data = JsonManager.Parse("ids-config.json")
+        filepath = data.get("filepath", "")
+        folderpaths = data.get("folderpath", [])
+        result = []
+        for file in filepath:
+            entry = FileManager.GetAllInfos(file)
+            result.append(entry)
+        for folder in folderpaths:
+            entry = FileManager.GetAllInfos(folder)
+            result.append(entry)
+
+        return result
+
+
     def UpdateDB(data):
-        pass
+        JsonManager.Write("/var/ids/db.json", data)
 
     def VerifyJson(pathfolder : str, data):
         old_data = JsonManager.Parse(pathfolder)
