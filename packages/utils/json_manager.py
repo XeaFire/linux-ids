@@ -30,7 +30,7 @@ class JsonManager:
         data = JsonManager.Parse("ids-config.json")
         filepath = data.get("filepath", [])
         folderpaths = data.get("folderpath", [])
-        result = []
+        result = {}
         for file in filepath:
             entry = FileManager.GetAllInfos(file)
             result[file] = entry
