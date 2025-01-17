@@ -1,5 +1,9 @@
- [Unit]
-    Description= timer qui trigger la verif des fichiers
+[Unit]
+Description= timer qui trigger la verif des fichiers
 
-    [Timer]
-    OnCalendar=*-*-* *:*:00
+[Timer]
+OnCalendar=*-*-* *:*:00
+Unit=/etc/systemd/system/ids.service
+
+[Install]
+WantedBy=multi-user.target

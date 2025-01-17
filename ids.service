@@ -1,5 +1,9 @@
 [Unit]
-    Description= Mon petit service
+Description= Mon petit service
 
-    [Service]
-    ExecStart= *programme a lancer*
+[Service]
+Restart=always
+ExecStart=/usr/bin/python3 /home/brendan/linux-ids/ids.py
+
+[Install]
+WantedBy=multi-user.target
